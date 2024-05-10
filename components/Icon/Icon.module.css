@@ -1,0 +1,6 @@
+.bookmarkIcon {
+    /* BookMark 아이콘에 대한 스타일 */
+    background-image: url("../../public/images/star.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #DCDCDD;
+    height: 67px;
+    padding: 34px;
+  }
+
+  .logo {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: alfa slab one;
+    color: #F72F09;
+  }
+  
+  .image {
+    width: 41px;
+    height: 41px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .nickname {
+    font-size: 14px;
+    font-weight: 500;
+  }
