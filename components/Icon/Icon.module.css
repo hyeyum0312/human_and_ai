@@ -4,3 +4,21 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.viewIcon {
+    background-image: url("../../public/images/view.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.playIcon {
+    background-image: url("../../public/images/play.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.plusIcon {
+    background-image: url("../../public/images/plus.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

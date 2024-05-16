@@ -1,0 +1,98 @@
+
+.card {
+    width: auto;
+    border: 1px solid #C9C7BF;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+  .cardTop {
+    width: 100%;
+    height: 184px;
+    padding: 26px 15px;
+  }
+  
+  .cardTopIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  
+  .cardSubjectIcon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .cardTopMain {
+  
+  }
+  
+  .cardTopMainTitleWrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+  
+  .cardTopMainKind {
+    width: 4px 10px;
+    min-width: 32px;
+    margin-right: 13px;
+    background-color: #D7EBFF;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #2C5C76;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .cardTopMainTitle {
+    font-size: 19px;
+    font-weight: bold;
+    color: #1A1918;
+  }
+  .cardTopMainDesc {
+    padding-right: 44px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #61605A;
+  }
+  
+  .cardTopMainNickname{
+    color: #85837D;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .cardBottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  
+  .cardBottomMainItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardBottomMainItemData {
+    display: inline-block;
+    font-size: 12px;
+    color: #5C5B55;
+    margin-left: 7px;
+  }
+  
+  .cardBottom {
+    height: 52px;
+    padding: 17px;
+    border-top: 1px solid #C9C7BF;
+  }
+
+  &:hover {
+    border: 1px solid #12121D;
+  }
+}

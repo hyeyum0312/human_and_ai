@@ -1,6 +1,8 @@
+import Aside from "@/components/Aside";
 import Nav from "@/components/Nav";
+
 import "@/styles/globals.css";
-import "@/styles/nav.css"
+import "@/styles/nav.css";
 
 export default function RootLayout({
   children,
@@ -10,9 +12,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Nav></Nav>
+        <Nav />
+        <Aside />
         {children}
       </body>
     </html>
   );
+}
+
+interface MainLayoutProps {
+  children: React.ReactNode;
 }
