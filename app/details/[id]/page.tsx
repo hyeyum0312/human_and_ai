@@ -1,17 +1,15 @@
 'use client'
-import DetailsLayout from '@/app/detailLayout';
-import MainLayout from '@/app/mainLayout';
-import { GetServerSideProps } from 'next';
 import { usePathname } from 'next/navigation';
 
+interface DetailsProps {
+  params: { id: number };
+}
 
-export default function Details({ params }: { params: { id: number } }){
-    const id:number = params.id;
+export default function Details({ params }: DetailsProps) {
+  const id = params.id;
+  const pathname = usePathname();
 
-    return (
-        <DetailsLayout>
-            <div>AI페이지입니다. ID: {id}</div>
-        </DetailsLayout>
-        
-    );
+  return (
+    <div>AI페이지입니다. ID: {id}, Pathname: {pathname}</div>
+  );
 }
