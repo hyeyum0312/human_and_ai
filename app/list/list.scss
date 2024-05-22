@@ -21,6 +21,7 @@
         }
 
         .tabBox {
+            // @include T1;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -33,11 +34,6 @@
             font-weight: bold;
             padding: 0 34px;
 
-            .tapList {
-                
-
-            }
-
             .tapItem {
                 padding: 32px 11px 13px;
             }
@@ -47,29 +43,6 @@
     .categoryWrap {
         position: relative;
         min-height: 50px;
-
-        .category {
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 15px;
-            padding: 0 34px 40px;
-            min-height: 30px;
-            height: auto;
-        }
-
-        .item {
-            font-size: 15px;
-            font-weight: 300;
-            color: #61605A;
-            padding: 6px 18px;
-
-            &.active {
-                border: 1px solid #C7C5BD;
-                border-radius: 18px;
-                font-weight: 600;
-                
-            }
-        }
     }
 
 

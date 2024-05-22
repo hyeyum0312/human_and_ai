@@ -1,5 +1,6 @@
 import React from 'react';
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
+import "@/styles/scss/ui/_layout.scss"
 
 export default function Nav() {
   return (

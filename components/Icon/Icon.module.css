@@ -22,3 +22,9 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.aiIcon {
+    background-image: url("../../public/images/ai.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

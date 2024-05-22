@@ -1,0 +1,23 @@
+.chip {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    padding: 0 34px 40px;
+    min-height: 30px;
+    height: auto;
+    list-style: none;
+
+    .item {
+        font-size: 15px;
+        font-weight: 300;
+        color: #61605A;
+        padding: 6px 18px;
+
+        &.active {
+            border: 1px solid #C7C5BD;
+            border-radius: 18px;
+            font-weight: 600;
+            
+        }
+    }
+}

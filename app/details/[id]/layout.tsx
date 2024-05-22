@@ -1,7 +1,7 @@
 // src/app/detail/layout.tsx
 import Nav from "@/components/Nav";
-import "@/styles/globals.css";
-import "@/styles/nav.css";
+import "@/styles/globals.scss";
+import "@/styles/scss/ui/_layout.scss"
 
 interface DetailLayoutProps {
   children: React.ReactNode;

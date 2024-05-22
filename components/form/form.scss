@@ -1,0 +1,19 @@
+.inputField {
+    .contentBox {
+        .input {
+
+            width: 100%;
+            padding: 8px 16px;
+            border: none;
+            line-height: 26px;
+            border-radius: 8px;
+            background: #F7F7F5;
+            color: #1A1918;
+        }
+
+        .input::placeholder {
+            color: #C8C6BE;
+        }
+    }
+    
+}

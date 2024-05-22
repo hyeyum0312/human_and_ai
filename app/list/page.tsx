@@ -1,5 +1,9 @@
 import Card from "@/components/Card/Card";
 import "./list.scss";
+import "@/styles/scss/var/_chip.scss"
+import "@/styles/scss/_reset.scss"
+import "@/styles/scss/var/_button.scss"
+
 
 export default function details (){
     interface CardData {
@@ -122,7 +126,7 @@ export default function details (){
                     </div>
                     
                     <div className="categoryWrap">
-                        <ul className="category">
+                        <ul className="chip">
                             <li className="item active">전체</li>
                             <li className="item">범용/일반</li>
                             <li className="item">사랑</li>

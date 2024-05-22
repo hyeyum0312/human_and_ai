@@ -1,0 +1,65 @@
+@mixin C1() {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+@mixin C2() {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@mixin C3() {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@mixin T1() {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@mixin T2() {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@mixin T3() {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@mixin B1() {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.0192rem;
+}
+
+@mixin B2() {
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: -0.0168rem;
+}
+
+@mixin B3() {
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: -0.0288rem;
+}
+
+@mixin BTN1() {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.0192rem;
+}
+
+@mixin BTN2() {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.0168rem;
+}
+
+@mixin BTN3() {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.0144rem;
+}

@@ -1,0 +1,103 @@
+.detailPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    // -ms-overflow-style: none;  /* IE, Edge */
+    // scrollbar-width: none;
+
+
+    // &::-webkit-scrollbar {
+    //     display: none; /* Chrome, Safari, Opera */
+    // }
+
+    
+    .detailItem {
+        flex: 1;
+        padding: 52px 40px;
+        max-height: 600px;
+    
+        .autoTitle {
+            width: 100%;
+            margin-left: 15px;
+            font-size: 22px;
+            line-height: 1;
+            font-weight: 600;
+            color: #1A1918;
+        }
+
+        .formBox {
+
+            .fieldTitle {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                color: #383837;
+            }
+    
+            .fieldDesc {
+                margin: 16px 0px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 160%;
+                color: #61605A;
+            }
+        }
+
+        .contents {
+            padding-top: 32px;
+        }
+
+        .aiResult {
+            &.--default {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .comment {
+                    font-size: 13px;
+                    color: #61605A;
+
+                }
+            }
+            
+        }
+    }
+
+    .description {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 500;
+        color: #83837E;
+    }
+
+    .subjectChip {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        margin-bottom: 20px;
+
+        .item {
+            padding: 5px 9px;
+            font-size: 14px;
+            line-height: 1;
+            font-weight: 500;
+            border: 1px solid #C7C5BD;
+            border-radius: 5px;
+            color: #61605A;
+        }
+    }
+
+    .wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+        margin-bottom: 20px;
+        overflow: auto;
+    }
+}

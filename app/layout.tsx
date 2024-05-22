@@ -1,8 +1,7 @@
 // src/app/layout.tsx
-import ClientAside from "@/components/ClientAside";
+import Aside from "@/components/Aside";
 import Nav from "@/components/Nav";
-import "@/styles/globals.css";
-import "@/styles/nav.css";
+
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -13,7 +12,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
     <html lang="en">
       <body>
         <Nav />
-        <ClientAside />
+        <Aside />
         <main>{children}</main>
       </body>
     </html>

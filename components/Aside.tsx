@@ -1,5 +1,6 @@
 import React from 'react';
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
+import "@/styles/scss/ui/_layout.scss"
 import SvgIcon from '@/components/Icon/SvgIcon';
 
 export default function Aside() {
