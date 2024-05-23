@@ -1,24 +1,518 @@
-
-.button {
+@mixin button($type, $style, $size, $icon) {
     display: flex;
+    justify-content: center;
     align-items: center;
-    background: rgb(13, 13, 12);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    padding: 12px 38px;
-    margin: auto 13px 24px;
+    border-radius: 4px;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    // 버튼 스타일 관련
+    @if $type == "Point" {
+        @if $style == "Filled" {
+            background: #0D0D0C;
+            border: 1px solid #0D0D0C;
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                background:#0D0D0C;
+                border: 1px solid #0D0D0C;
+            }
+
+            &:active {
+                background: #0D0D0C;
+                border: 1px solid #0D0D0C;
+            }
+
+            :deep(.path) {
+                fill: #B7B7B6;
+                border: 1px solid #B7B7B6;
+            }
+        }
+
+        @if $style == "Outlined" {
+            border: 1px solid var(--green-500);
+            color: var(--green-500);
+
+            &:hover,
+            &:focus {
+                background: var(--gray-50);
+            }
+
+            &:active {
+                background: var(--gray-100);
+            }
+
+            :deep(.path) {
+                fill: var(--green-500);
+            }
+        }
+
+        @if $style == "Text" {
+            color: var(--green-500);
+
+            &:hover,
+            &:focus {
+                background: var(--green-50);
+            }
+
+            &:active {
+                background: var(--green-100);
+            }
+
+            :deep(.path) {
+                fill: var(--green-500);
+            }
+        }
+    }
+
+    @if $type == "Primary" {
+        @if $style == "Filled" {
+            background: var(--gray-900);
+            color: var(--gray-50);
+
+            &:hover,
+            &:focus {
+                background: var(--gray-700);
+            }
+
+            &:active {
+                background: var(--gray-500);
+            }
+
+            :deep(.path) {
+                fill: var(--gray-50);
+            }
+        }
+
+        @if $style == "Outlined" {
+            border: 1px solid var(--gray-900);
+            color: var(--gray-900);
+
+            &:hover,
+            &:focus {
+                background: var(--gray-50);
+            }
+
+            &:active {
+                background: var(--gray-100);
+            }
+
+            :deep(.path) {
+                fill: var(--gray-900);
+            }
+        }
+
+        @if $style == "Text" {
+            color: var(--gray-900);
+
+            &:hover,
+            &:focus {
+                background: var(--gray-50);
+            }
+
+            &:active {
+                background: var(--gray-100);
+            }
+
+            :deep(.path) {
+                fill: var(--gray-900);
+            }
+        }
+    }
+
+    @if $type == "Secondary" {
+        @if $style == "Filled" {
+            background: var(--gray-500);
+            color: var(--gray-50);
+
+            &:hover,
+            &:focus {
+                background: var(--gray-700);
+            }
+
+            &:active {
+                background: var(--gray-900);
+            }
+
+            :deep(.path) {
+                fill: var(--gray-50);
+            }
+        }
+
+        @if $style == "Outlined" {
+            background: var(--gray-0);
+            border: 1px solid var(--gray-500);
+            color: var(--gray-500);
+
+            &:hover,
+            &:focus {
+                background: var(--gray-50);
+            }
+
+            &:active {
+                background: var(--gray-100);
+            }
+
+            :deep(.path) {
+                fill: var(--gray-500);
+            }
+        }
+
+        @if $style == "Text" {
+            color: var(--gray-500);
+
+            &:hover,
+            &:focus {
+                background: var(--gray-50);
+            }
+
+            &:active {
+                background: var(--gray-100);
+            }
+
+            :deep(.path) {
+                fill: var(--gray-500);
+            }
+        }
+    }
+
+    &[disabled] {
+        @if $type == "Point" {
+            @if $style == "Filled" {
+                background: #B7B7B6;
+                border: 1px solid #B7B7B6;
+                color: #FFF;
+
+                :deep(.path) {
+                    fill: #B7B7B6
+                }
+            }
+
+            @if $style == "Outlined" {
+                border: 1px solid var(--green-100);
+                color: var(--green-100);
+
+                :deep(.path) {
+                    fill: var(--green-100);
+                }
+            }
+
+            @if $style == "Text" {
+                color: var(--green-100);
+
+                :deep(.path) {
+                    fill: var(--green-100);
+                }
+            }
+        }
+
+        @if $type == "Primary" {
+            @if $style == "Filled" {
+                background: var(--gray-300);
+                color: var(--gray-0);
+
+                :deep(.path) {
+                    fill: var(--gray-0);
+                }
+            }
+
+            @if $style == "Outlined" {
+                border: 1px solid var(--gray-300);
+                color: var(--gray-300);
+
+                :deep(.path) {
+                    fill: var(--gray-300);
+                }
+            }
+
+            @if $style == "Text" {
+                color: var(--gray-300);
+
+                :deep(.path) {
+                    fill: var(--gray-300);
+                }
+            }
+        }
+
+        @if $type == "Secondary" {
+            @if $style == "Filled" {
+                background: var(--gray-100);
+                color: var(--gray-0);
+
+                :deep(.path) {
+                    fill: var(--gray-0);
+                }
+            }
+
+            @if $style == "Outlined" {
+                background: var(--gray-0);
+                border: 1px solid var(--gray-100);
+                color: var(--gray-100);
+
+                :deep(.path) {
+                    fill: var(--gray-100);
+                }
+            }
+
+            @if $style == "Text" {
+                color: var(--gray-100);
+
+                :deep(.path) {
+                    fill: var(--gray-100);
+                }
+            }
+        }
+    }
+
+    // 버튼 사이즈 관련
+    @if $size == "XSmall" {
+        height: 24px;
+        column-gap: 2px;
+
+        @if $icon == "None" {
+            padding: 0 8px;
+        }
+
+        @if $icon == "Left" {
+            padding: 0 8px 0 6px;
+        }
+
+        @if $icon == "Right" {
+            padding: 0 6px 0 8px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: top;
+        }
+    }
+
+    @if $size == "Small" {
+        height: 32px;
+        column-gap: 4px;
+
+        @if $icon == "None" {
+            padding: 0 16px;
+        }
+
+        @if $icon == "Left" {
+            padding: 0 16px 0 14px;
+        }
+
+        @if $icon == "Right" {
+            padding: 0 14px 0 16px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: top;
+        }
+    }
+
+    @if $size == "Medium" {
+        height: 40px;
+        column-gap: 8px;
+
+        @if $icon == "None" {
+            padding: 0 24px;
+        }
+
+        @if $icon == "Left" {
+            padding: 0 22px 0 24px;
+        }
+
+        @if $icon == "Right" {
+            padding: 0 24px 0 22px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: top;
+        }
+    }
+
+    @if $size == "Large" {
+        height: 48px;
+        column-gap: 8px;
+
+        @if $icon == "None" {
+            padding: 0 32px;
+        }
+
+        @if $icon == "Left" {
+            padding: 0 32px 0 30px;
+        }
+
+        @if $icon == "Right" {
+            padding: 0 30px 0 32px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: top;
+        }
+    }
+
+    @if $size == "XLarge" {
+        height: 56px;
+        column-gap: 8px;
+
+        @if $icon == "None" {
+            padding: 0 40px;
+        }
+
+        @if $icon == "Left" {
+            padding: 0 40px 0 38px;
+        }
+
+        @if $icon == "Right" {
+            padding: 0 38px 0 40px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: top;
+        }
+    }
 }
 
-.btnTitle {
-    background: rgb(13, 13, 12);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
+@mixin underlineButton($type, $size) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    @if $type == "Point" {
+        color: var(--green-500);
+
+        &:hover,
+        &:focus {
+            color: var(--green-700);
+        }
+
+        &:active {
+            color: var(--green-900);
+        }
+
+        &[disabled] {
+            color: var(--green-300);
+        }
+    }
+
+    @if $type == "Primary" {
+        color: var(--gray-900);
+
+        &:hover,
+        &:focus {
+            color: var(--gray-700);
+        }
+
+        &:active {
+            color: var(--gray-500);
+        }
+
+        &[disabled] {
+            color: var(--gray-300);
+        }
+    }
+
+    @if $type == "Secondary" {
+        color: var(--gray-500);
+
+        &:hover,
+        &:focus {
+            color: var(--green-700);
+        }
+
+        &:active {
+            color: var(--green-900);
+        }
+
+        &[disabled] {
+            color: var(--green-300);
+        }
+    }
+
+    // 버튼 사이즈 관련
+    @if $size == "XSmall" {
+        height: 24px;
+        padding: 0 8px;
+    }
+
+    @if $size == "Small" {
+        height: 32px;
+        padding: 0 16px;
+    }
+
+    @if $size == "Medium" {
+        height: 40px;
+        padding: 0 24px;
+    }
+
+    @if $size == "Large" {
+        height: 48px;
+        padding: 0 32px;
+    }
+
+    @if $size == "XLarge" {
+        height: 56px;
+        padding: 0 40px;
+    }
+}
+
+@mixin iconButton() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    &.--active {
+        &:hover .path,
+        &:focus .path {
+            fill: var(--gray-700);
+        }
+
+        &:active .path {
+            fill: var(--gray-900);
+        }
+
+        &[disabled] .path {
+            fill: var(--gray-100);
+        }
+
+        .path {
+            fill: var(--gray-500);
+        }
+    }
+
+    &:hover .path,
+    &:focus .path {
+        fill: var(--green-700);
+    }
+
+    &:active .path {
+        fill: var(--green-900);
+    }
+
+    &[disabled] .path {
+        fill: var(--green-100);
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+    }
+
+    .path {
+        fill: var(--green-500);
+    }
 }

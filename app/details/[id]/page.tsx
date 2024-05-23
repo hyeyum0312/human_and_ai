@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { useDevice } from '@/hooks/useDevice';
 import "./details.scss";
 import InputField from '@/components/form/InputField';
-
+import "@/styles/scss/var/_button.scss"
 import SvgIcon from '@/components/Icon/SvgIcon'
 
 interface DetailLayoutProps {
@@ -49,17 +49,6 @@ export default function Details({ children }: Readonly<DetailLayoutProps>) {
           <hr className='divider'/>
 
           <div className='formBox'>
-            <div className='contents'>
-              <p className='fieldTitle'>무엇을 사고 싶으세요?</p>
-              <p className='fieldDesc'>사고 싶은 물건을 적어주세요.</p>
-              <InputField/>
-            </div>
-
-            <div className='contents'>
-              <p className='fieldTitle'>무엇을 사고 싶으세요?</p>
-              <p className='fieldDesc'>사고 싶은 물건을 적어주세요.</p>
-              <InputField/>
-            </div>
 
             <div className='contents'>
               <p className='fieldTitle'>무엇을 사고 싶으세요?</p>
@@ -79,11 +68,23 @@ export default function Details({ children }: Readonly<DetailLayoutProps>) {
               <InputField/>
             </div>
           </div>
+
+          <button className='aiAutoCreation' disabled>
+            <SvgIcon icon="ai" size="27px" color="red" />
+            자동생성
+          </button>
+
+          <div>
+            <p>현재 글자수: <span>0</span>자 (<span>0</span>byte )</p>
+            <p>입력 가능 토큰: <span>0</span>/<span>2000</span> 토큰</p>
+          </div>
+          
+
         </div>
 
         <div className='detailItem'>
             <div className='aiResult --default'>
-              <SvgIcon icon="ai" size="50px" color="red" />
+              <SvgIcon icon="ai" size="50px" color="white" />
               <p className='comment'>자동 생성을 눌러보세요!</p>
             </div>
         </div>

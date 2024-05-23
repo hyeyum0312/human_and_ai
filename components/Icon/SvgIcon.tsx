@@ -15,6 +15,7 @@ const Icon: React.FC<IconProps> = ({ icon, size = '24px', color = 'red' }) => {
     width: size,
     height: size,
     fill: color,
+    stroke: color
   };
 
   return <div className={iconClassName} style={iconStyle} />;

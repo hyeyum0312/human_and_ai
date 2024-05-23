@@ -1,3 +1,6 @@
+@import "@/styles/scss/var/button";
+@import "@/styles/scss/var/font";
+
 .detailPage {
     display: flex;
     align-items: center;
@@ -5,14 +8,6 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    // -ms-overflow-style: none;  /* IE, Edge */
-    // scrollbar-width: none;
-
-
-    // &::-webkit-scrollbar {
-    //     display: none; /* Chrome, Safari, Opera */
-    // }
-
     
     .detailItem {
         flex: 1;
@@ -99,5 +94,14 @@
         gap: 30px;
         margin-bottom: 20px;
         overflow: auto;
+    }
+
+
+    .aiAutoCreation {
+        @include button("Point", "Filled", "Medium", "None");
+        @include BTN1;
+        width: 100%;
+        color: #fff;
+        margin-top: 20px;
     }
 }
