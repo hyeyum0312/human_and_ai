@@ -1,23 +1,48 @@
-.chip {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 15px;
-    padding: 0 34px 40px;
-    min-height: 30px;
-    height: auto;
-    list-style: none;
+@mixin chip($style) {
+    @if $style == "filled" {
+        padding: 5px 9px;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 500;
+        border: 1px solid #E8F6FF;
+        background-color: #E8F6FF;
+        border-radius: 5px;
+        color: #0393F7;
+        cursor: pointer;
 
-    .item {
-        font-size: 15px;
-        font-weight: 300;
-        color: #61605A;
-        padding: 6px 18px;
 
-        &.active {
-            border: 1px solid #C7C5BD;
-            border-radius: 18px;
-            font-weight: 600;
-            
+        &:hover,
+        &:focus {
+            background:#E8F6FF;
+            border: 1px solid #E8F6FF;
+        }
+
+        &:active {
+            background: #E8F6FF;
+            border: 1px solid #E8F6FF;
         }
     }
+
+    @if $style == "Outlined" {
+        padding: 5px 9px;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 500;
+        border: 1px solid #C7C5BD;
+        border-radius: 5px;
+        color: #61605A;
+        cursor: pointer;
+    }
+
+    @if $style == "Point" {
+        padding: 5px 9px;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 500;
+        border: 1px solid #C7C5BD;
+        border-radius: 5px;
+        color: #61605A;
+        cursor: pointer;
+    }
+
 }

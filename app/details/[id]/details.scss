@@ -1,5 +1,6 @@
 @import "@/styles/scss/var/button";
 @import "@/styles/scss/var/font";
+@import "@/styles/scss/var/chip";
 
 .detailPage {
     display: flex;
@@ -24,6 +25,7 @@
         }
 
         .formBox {
+            position: relative;
 
             .fieldTitle {
                 font-weight: 600;
@@ -70,22 +72,37 @@
         color: #83837E;
     }
 
-    .subjectChip {
+
+    .chip {
         display: flex;
         align-items: center;
         column-gap: 8px;
-        margin-bottom: 20px;
 
         .item {
-            padding: 5px 9px;
-            font-size: 14px;
-            line-height: 1;
-            font-weight: 500;
-            border: 1px solid #C7C5BD;
-            border-radius: 5px;
-            color: #61605A;
+            @include chip("Outlined");
+        }
+
+        &.--filled {
+            justify-content: flex-end;
+            position: absolute;
+            right: 0;
+            top: 40px;
+
+            .item {
+                @include chip("filled");
+            }
+        }
+
+        &.--point {
+            margin-bottom: 29px;
+            
+            .item {
+                @include chip("Point");
+            }
         }
     }
+
+
 
     .wrap {
         display: flex;

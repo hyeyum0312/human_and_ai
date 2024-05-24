@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { useDevice } from '@/hooks/useDevice';
 import "./details.scss";
 import InputField from '@/components/form/InputField';
-import "@/styles/scss/var/_button.scss"
 import SvgIcon from '@/components/Icon/SvgIcon'
 
 interface DetailLayoutProps {
@@ -41,31 +40,35 @@ export default function Details({ children }: Readonly<DetailLayoutProps>) {
             <p className='autoTitle'>여보, 사도 돼?</p>
           </div>
           <p className='description'>사고 싶은 물건을 사기 전에 허락을 받아야 하는 사람들을 위한 툴</p>
-          <div className='subjectChip'>
+          <div className='chip --point'>
             <span className='item'>범용/일반</span>
             <span className='item'>글짓기</span>
             <span className='item'>엔터테인먼트</span>
           </div>
           <hr className='divider'/>
 
+
           <div className='formBox'>
-
+            <div className='chip --filled'>
+              <span className='item'>예시 텍스트</span>
+              <span className='item'>전체 지우기</span>
+            </div>
             <div className='contents'>
               <p className='fieldTitle'>무엇을 사고 싶으세요?</p>
               <p className='fieldDesc'>사고 싶은 물건을 적어주세요.</p>
-              <InputField/>
+              <InputField placeholder="ex. 아이패드1"/>
             </div>
 
             <div className='contents'>
               <p className='fieldTitle'>무엇을 사고 싶으세요?</p>
               <p className='fieldDesc'>사고 싶은 물건을 적어주세요.</p>
-              <InputField/>
+              <InputField placeholder="ex. 아이패드2"/>
             </div>
 
             <div className='contents'>
               <p className='fieldTitle'>무엇을 사고 싶으세요?</p>
               <p className='fieldDesc'>사고 싶은 물건을 적어주세요.</p>
-              <InputField/>
+              <InputField placeholder="ex. 아이패드3"/>
             </div>
           </div>
 
